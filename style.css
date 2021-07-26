@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400&display=swap");
+:root{
+    --primary-color : #A7C4BC;
+    --secondary-color : #DFEEEA;
+    --third-color : #A7C4BC;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    font-family: "Saira Extra Condensed", sans-serif;
+}
+
+/* 1. header and nav */
+/* =============================== */
+header .nav-container{
+    max-width: 100vw;
+    margin: 0 auto;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    animation-name: comeFromTop;
+    animation-duration: 1.5s;
+
+}
+
+nav .nav-menu{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 20px;
+    padding: 30px 0px;
+    list-style: none;
+}
+
+
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-family: "Saira Extra Condensed", sans-serif;
+    transition: transform 2s;
+}
+
+
+nav a:hover{
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.1); 
+}
+/* =============================== */
+
+main .btn-top{
+    position: fixed;
+    opacity: 1;
+    right: 60px;
+    bottom: 30px;
+    z-index: 1;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    animation-name: comeFromBottom;
+    animation-duration: 1s;
+}
+
+
+
+main #btnToTop img{
+    width: 3rem;
+}
+
+/*2. Home Section  */
+/* =============================== */
+
+main #homeSection .intro{
+    position: relative;
+    width: 80%;
+    height: 90vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+main #homeSection .intro #title{
+    font-size:  80px;
+    animation-name: comeFromLeft;
+    animation-duration: 3s;
+}
+main #homeSection  .desc{
+    font-size: 30px;
+    animation-name: comeFromRight;
+    animation-duration: 3s;
+}
+
+main #homeSection  #title span{
+    color: #2F5D62;
+    
+}
+/* =============================== */
+
+/*3. ABout Section  */
+/* =============================== */
+main #aboutSection{
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+}
+main  #aboutSection article{
+    display: flex;
+    margin: 50px;
+}
+
+main  #aboutSection article .about-desc, .card  {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+main  #aboutSection article .about-desc{
+    animation-name: comeFromTop;
+    animation-duration: 2s;
+}
+
+
+
+main #aboutSection article #experiences-section .experiences-container{
+    display: flex;
+    margin-top: 20px;
+    height: 40vh;
+    flex-direction: column;
+    /* border: var(--borderLine); */
+    width: 100%;
+    overflow-y: scroll;
+}
+
+main #aboutSection article #experiences-section .experiences{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    animation-name: comeFromLeft;
+    animation-duration: 1s;
+}
+
+#experiences-section .experiences .company{
+    opacity:0.6;
+}   
+
+main #aboutSection article #cardSection .card{
+    background-color: white;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  text-align: center;
+  animation-name: comeFromRight;
+  animation-duration: 2s;
+}
+
+main #aboutSection article #cardSection .card img{
+    width: 150px;
+    height: 150px;
+}
+
+main #aboutSection article #cardSection .card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.01); 
+}
+
+main #aboutSection article #cardSection .card .social-media{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    list-style-type: none;
+}
+
+main #aboutSection article #cardSection .card .social-media img{
+    transition: transform .2s;
+    width: 30px;
+}
+
+main #aboutSection article #cardSection .card .social-media img:hover{
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.1); 
+} 
+/* =============================== */
+
+/*4. Portfolio/works Section  */
+/* =============================== */
+main #portfolioSection{
+    padding: 40px;
+}
+main #portfolioSection  .projects-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main #portfolioSection .projects-container .project img{
+    margin-right: 20px;
+    width: 400px;
+    height: 250px;
+    opacity: 0.5 ;
+    transition: transform 0.1s;
+}
+
+main #portfolioSection .projects-container .project img:hover{
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.02); 
+    opacity: 1;
+}
+/* =============================== */
+
+/*5. Contact Section  */
+/* =============================== */
+#contactSection {
+    padding: 40px;
+    background-color:#DFEEEA ;
+}
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-container img{
+    width: 40px;
+    margin: 30px 50px 0px;
+    transition: transform .2s;
+}
+
+.contact-container img:hover{
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.1); 
+}
+/* =============================== */
+
+footer{
+    background-color: var(--primary-color);
+    font-weight: bold;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.visible{
+    opacity: 1;
+
+}
+.hidden{
+    opacity: 0;
+}
+
+.fadein-left{
+    animation-name: comeFromLeft;
+    animation-duration: 2s;
+}
+
+.fadein-right{
+    animation-name: comeFromRight;
+    animation-duration: 2s;
+}
+
+.fadein-Top{
+    animation-name: comeFromTop;
+    animation-duration: 2s;
+}
+
+@keyframes comeFromLeft{
+    0%{
+        opacity: 0;
+        transform:  translateX(-100px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes comeFromRight{
+    0%{
+        opacity: 0;
+        transform:  translateX(100px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+@keyframes comeFromTop{
+    0%{
+        opacity: 0;
+        transform:  translateY(-100px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes comeFromBottom{
+    0%{
+        opacity: 0;
+        transform:  translateY(100px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+/*resp media breakpoints */
+/* =============================== */
+@media screen and (max-width: 900px ){
+    /* header and nav */
+    /* =============================== */
+    body{
+        /* background-color:blue */
+    }
+    nav{
+        justify-content: center;
+        max-width: 100vw;
+    }
+
+    main .btn-top{
+        right: 30px;
+    }
+    
+    nav .nav-menu a{
+        margin: 2vw;
+    }
+
+    main  #aboutSection article{
+        display: inline-block;
+    }
+
+    main #portfolioSection .projects-container .project img{
+        margin-right: 20px;
+        width: 100%;
+        height: auto;
+    }
+
+    .contact-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-container img{
+        width: 30px;
+        margin: 10px 18px 0px;
+        transition: transform .2s;
+    }
+    /* =============================== */
+   
+}
+/* =============================== */
